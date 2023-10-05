@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;600&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Jobank</title>
+</head>
+
+<body class="container">
+    <header class="header">
+        <div class="header__container">
+            <div class="header__user">
+                <img class="header__image" src="images/user-image.png" alt="bank logo">
+                <h4 class="header__text">Olá João, Bem vindo(a)! <a href="#">Sair</a></h4>
+            </div>
+
+            <div class="header__logo">
+                <img class="header__image" src="images/jobank-logo.png" alt="bank logo">
+                <h3 class="header__text">Jobank</h3>
+            </div>
+        </div>
+
+
+    </header>
+    <main class="main__container">
+        <section class="column__statement">
+            <h3 class="column__maintext">Transações Recentes</h3>
+            <p class="column__text--small" data-transactions-recent>Você não realizou nenhuma transação ainda</p>
+        </section>
+        <section class="column__transaction">
+            <h3 class="column__maintext">Área do Cliente</h3>
+            <div class="header__balance">
+                <p class="column__text" required>Saldo: R$ <span data-balance>1000.00</span></p>
+                <p class="column__text"> Conta: 0132-01</p>
+            </div>
+
+            <form>
+                <div class="column__form">
+                    <label class="column__text">Tipo de Transação:</label>
+                    <select class="column__input" data-transaction-type required>
+                        <option value="Select">Selecione um tipo</option>
+                        <option value="Transfer">Transferência</option>
+                        <option value="Deposit">Depósito</option>
+                        <option value="Payment">Pagamento de Boleto</option>
+                    </select>
+                </div>
+                <div class="column__form">
+                    <label class="column__text">Valor</label>
+                    <input class="column__input" placeholder="R$ 0.00" data-transaction-value required>
+                </div>
+                <button class="column__button" data-complete-transaction-button>Completar Transação</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">João Paulo Mendonça Prado</p>
+        <p class="footer__text"><a href="http://www.pixeljoao.com.br">www.pixeljoao.com.br</a></p>
+    </footer>
+    <script src="js/app.js"></script>
+    <script src="js/util.js"></script>
+</body>
+
+</html>
